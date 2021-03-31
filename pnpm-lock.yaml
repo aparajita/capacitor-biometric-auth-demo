@@ -1,5 +1,5 @@
 dependencies:
-  '@aparajita/capacitor-biometric-auth': 1.0.2
+  '@aparajita/capacitor-biometric-auth': 1.0.4
   '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
   '@capacitor/core': 2.4.7
   '@capacitor/ios': 2.4.7_@capacitor+core@2.4.7
@@ -36,7 +36,7 @@ devDependencies:
   vue-eslint-parser: 7.6.0_eslint@7.23.0
 lockfileVersion: 5.2
 packages:
-  /@aparajita/capacitor-biometric-auth/1.0.2:
+  /@aparajita/capacitor-biometric-auth/1.0.4:
     dependencies:
       '@aparajita/capacitor-native-decorator': 1.1.1
       '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
@@ -45,7 +45,7 @@ packages:
       tslib: 2.1.0
     dev: false
     resolution:
-      integrity: sha512-rMwIp76tMRqVSx/Rl1ETUfy8MkNVpSRKBR2Zqe3DgjzlMU+9taV1cGpU6eP5/NlWdXDDVaIo5Tpv3Zpqulkikg==
+      integrity: sha512-XLbPqZ7d+nnFkCUxVokmn5EQCWnzSNk5Kw4QFK6Or/Rfz586U1KZ9mT5a3Ma0RPN8hffmamlO8oPVocZDHXJbw==
   /@aparajita/capacitor-native-decorator/1.1.1:
     dependencies:
       '@capacitor/core': 2.4.7
@@ -4811,7 +4811,7 @@ packages:
       cosmiconfig: 6.0.0
       deepmerge: 4.2.2
       fs-extra: 9.1.0
-      memfs: 3.2.0
+      memfs: 3.2.1
       minimatch: 3.0.4
       schema-utils: 2.7.0
       semver: 7.3.5
@@ -6428,7 +6428,7 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
-  /memfs/3.2.0:
+  /memfs/3.2.1:
     dependencies:
       fs-monkey: 1.0.1
     dev: true
@@ -6436,7 +6436,7 @@ packages:
       node: '>= 4.0.0'
     optional: true
     resolution:
-      integrity: sha512-f/xxz2TpdKv6uDn6GtHee8ivFyxwxmPuXatBb1FBwxYNuVpbM3k/Y1Z+vC0mH/dIXXrukYfe3qe5J32Dfjg93A==
+      integrity: sha512-Y5vcpQzWTime4fBTr/fEnxXUxEYUgKbDlty1WX0gaa4ae14I6KmvK1S8HtXOX0elKAE6ENZJctkGtbTFYcRIUw==
   /memory-fs/0.4.1:
     dependencies:
       errno: 0.1.8
@@ -10251,7 +10251,7 @@ packages:
     resolution:
       integrity: sha512-jcKpkthap6x63MB4TxwCyuIGkV0oYP/YRyuQU5UO0Yz/E/ZAu+653/uov+phdmO54n6BcvFRyyt0RRrWdN2mpw==
 specifiers:
-  '@aparajita/capacitor-biometric-auth': ^1.0.2
+  '@aparajita/capacitor-biometric-auth': ^1.0.4
   '@capacitor/android': ^2.4.7
   '@capacitor/cli': 2.4.7
   '@capacitor/core': 2.4.7
