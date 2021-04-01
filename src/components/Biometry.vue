@@ -5,13 +5,10 @@
     </p>
 
     <div class="flex flex-col justify-start items-start flex-1 w-full">
-      <ion-list class="w-full">
+      <ion-list class="w-full pr-4" lines="inset">
         <ion-list-header>Options</ion-list-header>
 
-        <ion-item
-          v-if="!isNative"
-          lines="none"
-        >
+        <ion-item v-if="!isNative">
           <ion-label class="flex-initial">
             Biometry:
           </ion-label>
@@ -59,7 +56,7 @@
           </ion-select>
         </ion-item>
 
-        <ion-item lines="none">
+        <ion-item>
           <ion-label>
             Reason:
           </ion-label>
@@ -72,7 +69,6 @@
 
         <ion-item
           v-if="isNative"
-          lines="none"
         >
           <ion-label>
             Cancel title:
@@ -86,7 +82,6 @@
 
         <ion-item
           v-if="isIOS"
-          lines="none"
         >
           <ion-label>
             Fallback title:
@@ -100,7 +95,6 @@
 
         <ion-item
           v-if="isAndroid"
-          lines="none"
         >
           <ion-label>
             Title:
@@ -112,10 +106,7 @@
           />
         </ion-item>
 
-        <ion-item
-          v-if="isAndroid"
-          lines="none"
-        >
+        <ion-item v-if="isAndroid">
           <ion-label>
             Subtitle:
           </ion-label>
@@ -126,10 +117,7 @@
           />
         </ion-item>
 
-        <ion-item
-          v-if="isAndroid"
-          lines="none"
-        >
+        <ion-item v-if="isAndroid">
           <ion-label>
             Max attempts:
           </ion-label>
@@ -144,7 +132,6 @@
 
         <ion-item
           v-if="isNative"
-          lines="none"
         >
           <ion-checkbox
             v-model="options.allowDeviceCredential"
