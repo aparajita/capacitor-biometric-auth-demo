@@ -1,5 +1,5 @@
 dependencies:
-  '@aparajita/capacitor-biometric-auth': 1.0.4
+  '@aparajita/capacitor-biometric-auth': 1.0.7
   '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
   '@capacitor/core': 2.4.7
   '@capacitor/ios': 2.4.7_@capacitor+core@2.4.7
@@ -36,7 +36,7 @@ devDependencies:
   vue-eslint-parser: 7.6.0_eslint@7.23.0
 lockfileVersion: 5.2
 packages:
-  /@aparajita/capacitor-biometric-auth/1.0.4:
+  /@aparajita/capacitor-biometric-auth/1.0.7:
     dependencies:
       '@aparajita/capacitor-native-decorator': 1.1.1
       '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
@@ -45,7 +45,7 @@ packages:
       tslib: 2.1.0
     dev: false
     resolution:
-      integrity: sha512-XLbPqZ7d+nnFkCUxVokmn5EQCWnzSNk5Kw4QFK6Or/Rfz586U1KZ9mT5a3Ma0RPN8hffmamlO8oPVocZDHXJbw==
+      integrity: sha512-aVtBY5rZm6yVIWr6kmWvFmNzozPke7EJpC/Sbvbc8e1Hg2jn+HTpodzNEEyALUW7jMruw1XwKPlNVCW82m+D8g==
   /@aparajita/capacitor-native-decorator/1.1.1:
     dependencies:
       '@capacitor/core': 2.4.7
@@ -10251,7 +10251,7 @@ packages:
     resolution:
       integrity: sha512-jcKpkthap6x63MB4TxwCyuIGkV0oYP/YRyuQU5UO0Yz/E/ZAu+653/uov+phdmO54n6BcvFRyyt0RRrWdN2mpw==
 specifiers:
-  '@aparajita/capacitor-biometric-auth': ^1.0.4
+  '@aparajita/capacitor-biometric-auth': ^1.0.7
   '@capacitor/android': ^2.4.7
   '@capacitor/cli': 2.4.7
   '@capacitor/core': 2.4.7

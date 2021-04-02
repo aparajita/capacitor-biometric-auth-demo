@@ -10,7 +10,7 @@ def capacitor_pods
   # Automatic Capacitor Pod dependencies, do not delete
   pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.7_@capacitor+core@2.4.7/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.7_@capacitor+core@2.4.7/node_modules/@capacitor/ios'
-  pod 'AparajitaCapacitorBiometricAuth', :path => '../../../capacitor-biometric-auth'
+  pod 'AparajitaCapacitorBiometricAuth', :path => '../../node_modules/.pnpm/@aparajita/capacitor-biometric-auth@1.0.7/node_modules/@aparajita/capacitor-biometric-auth'
   # Do not delete
 end
 
