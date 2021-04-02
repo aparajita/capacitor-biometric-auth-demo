@@ -25,6 +25,11 @@
     height: unset; /* No need for fixed height on the web */
   }
 
+  /* On Android, I'm getting a double border under .item-interactive */
+  html.plt-android .item-interactive {
+    --inner-border-width: 0;
+  }
+
   /* Don't highlight items */
   ion-item {
     --background-activated-opacity: 0;
