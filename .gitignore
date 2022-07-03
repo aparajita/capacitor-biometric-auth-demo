@@ -7,9 +7,9 @@ dist/
 node_modules/
 
 # iOS files
-Pods
-Build
-xcuserdata
+#Pods
+#Build
+#xcuserdata
 
 # macOS files
 .DS_Store
@@ -62,3 +62,5 @@ captures/
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
+
+.eslintcache

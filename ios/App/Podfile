@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
@@ -7,11 +7,14 @@ use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
 def capacitor_pods
-  # Automatic Capacitor Pod dependencies, do not delete
-  pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.7_@capacitor+core@2.4.7/node_modules/@capacitor/ios'
-  pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.7_@capacitor+core@2.4.7/node_modules/@capacitor/ios'
-  pod 'AparajitaCapacitorBiometricAuth', :path => '../../node_modules/.pnpm/@aparajita/capacitor-biometric-auth@1.0.7/node_modules/@aparajita/capacitor-biometric-auth'
-  # Do not delete
+  pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor+ios@3.6.0_@capacitor+core@3.6.0/node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor+ios@3.6.0_@capacitor+core@3.6.0/node_modules/@capacitor/ios'
+  pod 'AparajitaCapacitorBiometricAuth', :path => '../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@2.0.3_@capacitor+core@3.6.0/node_modules/@aparajita/capacitor-biometric-auth'
+  pod 'CapacitorApp', :path => '../../node_modules/.pnpm/@capacitor+app@1.1.1_@capacitor+core@3.6.0/node_modules/@capacitor/app'
+  pod 'CapacitorHaptics', :path => '../../node_modules/.pnpm/@capacitor+haptics@1.1.4_@capacitor+core@3.6.0/node_modules/@capacitor/haptics'
+  pod 'CapacitorKeyboard', :path => '../../node_modules/.pnpm/@capacitor+keyboard@1.2.3_@capacitor+core@3.6.0/node_modules/@capacitor/keyboard'
+  pod 'CapacitorSplashScreen', :path => '../../node_modules/.pnpm/@capacitor+splash-screen@1.2.2_@capacitor+core@3.6.0/node_modules/@capacitor/splash-screen'
+  pod 'CapacitorStatusBar', :path => '../../node_modules/.pnpm/@capacitor+status-bar@1.0.8_@capacitor+core@3.6.0/node_modules/@capacitor/status-bar'
 end
 
 target 'App' do

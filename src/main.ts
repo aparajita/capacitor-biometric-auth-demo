@@ -1,9 +1,7 @@
+import { IonicVue, isPlatform } from '@ionic/vue'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-
-import { IonicVue, isPlatform } from '@ionic/vue'
-import '@aparajita/capacitor-biometric-auth'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css'
@@ -25,7 +23,7 @@ import '@ionic/vue/css/display.css'
 import './theme/variables.css'
 import './assets/css/styles.pcss'
 
-const config: { [key: string]: any } = {}
+const config: Record<string, unknown> = {}
 
 if (isPlatform('desktop')) {
   config.mode = 'ios'
@@ -33,6 +31,12 @@ if (isPlatform('desktop')) {
 
 const app = createApp(App).use(IonicVue, config).use(router)
 
-router.isReady().then(() => {
-  app.mount('#app')
-})
+router
+  .isReady()
+  .then(() => {
+    app.mount('#app')
+  })
+  .catch((error) => {
+    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+    console.error((error as Error).message)
+  })
