@@ -83,7 +83,7 @@
       <IonItem v-if="isAndroid">
         <IonLabel>Max attempts:</IonLabel>
         <IonInput
-          v-model.number="androidMaxAttempts"
+          v-model.number="options.androidMaxAttempts"
           type="number"
           inputmode="decimal"
           min="1"
@@ -217,12 +217,6 @@ const isIOS = computed(() => Capacitor.isNativePlatform() && isPlatform('ios'))
 const isAndroid = computed(
   () => Capacitor.isNativePlatform() && isPlatform('android')
 )
-
-const androidMaxAttempts = computed({
-  // eslint-disable-next-line no-magic-numbers
-  get: () => String(options.androidMaxAttempts ?? 3),
-  set: (value: string) => (options.androidMaxAttempts = Number(value))
-})
 
 /*
  * methods
