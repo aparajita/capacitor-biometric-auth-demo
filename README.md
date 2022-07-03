@@ -1,6 +1,6 @@
 <div class="markdown-body">
 
-# capacitor-biometric-auth-demo
+# capacitor-biometric-auth-demo&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/aparajita%2Fcapacitor-biometric-auth-demo.svg)](https://badge.fury.io/gh/aparajita%2Fcapacitor-biometric-auth-demo)
 
 This [Ionic](https://ionicframework.com) application provides a demo of all of the capacibilities of the [capacitor-biometric-auth](https://github.com/aparajita/capacitor-biometric-auth) Capacitor plugin.
 
