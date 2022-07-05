@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@aparajita/capacitor-biometric-auth': ^2.0.3
+  '@aparajita/capacitor-biometric-auth': ^2.0.5
   '@aparajita/eslint-config-vue': ^1.0.2
   '@aparajita/prettier-config': ^1.0.0
   '@capacitor/android': ^3.6.0
@@ -42,7 +42,7 @@ specifiers:
   vue-tsc: ~0.38.2
 
 dependencies:
-  '@aparajita/capacitor-biometric-auth': 2.0.3_@capacitor+core@3.6.0
+  '@aparajita/capacitor-biometric-auth': 2.0.5_@capacitor+core@3.6.0
   '@capacitor/android': 3.6.0_@capacitor+core@3.6.0
   '@capacitor/app': 1.1.1_@capacitor+core@3.6.0
   '@capacitor/core': 3.6.0
@@ -86,21 +86,21 @@ devDependencies:
 
 packages:
 
-  /@aparajita/capacitor-biometric-auth/2.0.3_@capacitor+core@3.6.0:
-    resolution: {integrity: sha512-m+nCWnQYxD8FfTCOTxwqA8yqaXqB639VVQUG/7tgmcFz/oKZti/EcVmPp6xp6hQZtxN/SjNDQPgmwSwNIBBung==}
+  /@aparajita/capacitor-biometric-auth/2.0.5_@capacitor+core@3.6.0:
+    resolution: {integrity: sha512-ksWaELVNiXgw1VNXNMcwLm03y+pRJBIF5hSz6UMFxPq1dPhuL59Cp4CPVI6PvDA0Vca5j1t4r6yPczW7Hi2GiA==}
     engines: {node: '>=16.15.1'}
     peerDependencies:
       '@capacitor/core': ^3.6.0
     dependencies:
-      '@aparajita/capacitor-native-decorator': 2.0.3
+      '@aparajita/capacitor-native-decorator': 2.0.4
       '@capacitor/android': 3.6.0_@capacitor+core@3.6.0
       '@capacitor/app': 1.1.1_@capacitor+core@3.6.0
       '@capacitor/core': 3.6.0
       '@capacitor/ios': 3.6.0_@capacitor+core@3.6.0
     dev: false
 
-  /@aparajita/capacitor-native-decorator/2.0.3:
-    resolution: {integrity: sha512-xPnXYZRI6gcwCIGcT7kSCABbQo/XI6SzM/SuDV0qGdP48HC2rx9U8yKUWcJc7DIRQM9aK/GKhbvX8D9K3y0zpw==}
+  /@aparajita/capacitor-native-decorator/2.0.4:
+    resolution: {integrity: sha512-Pp+6+lraQTk5B3a6NFL/wXDdwwXiD+E8c/mUqmpW4KRRIKhyVG+4V+iOT8D6+mzC5ULANf42wCi07QFtbkfYKQ==}
     engines: {node: '>=16.15.1'}
     hasBin: true
     dependencies:
