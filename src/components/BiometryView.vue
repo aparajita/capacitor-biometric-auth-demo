@@ -133,7 +133,14 @@ import {
   IonSelectOption,
   isPlatform
 } from '@ionic/vue'
-import { computed, onBeforeMount, onBeforeUnmount, reactive, ref } from 'vue'
+import {
+  computed,
+  onBeforeMount,
+  onBeforeUnmount,
+  reactive,
+  ref,
+  toRaw
+} from 'vue'
 
 const biometryTypes = [
   {
@@ -261,8 +268,8 @@ async function showErrorAlert(error: ResultError): Promise<void> {
 async function onAuthenticate(): Promise<void> {
   try {
     // options is a reactive proxy, we can't pass it directly to a plugin.
-    // so we make a copy. Spread works fine, it's a shallow object.
-    await BiometricAuth.authenticate({ ...options })
+    // so pass the underlying object.
+    await BiometricAuth.authenticate(toRaw(options))
     await showAlert('Authorization successful!')
   } catch (error) {
     // Someday TypeScript will let us type catch clauses...
