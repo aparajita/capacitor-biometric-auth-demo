@@ -12,14 +12,21 @@
   }
 }
 
-@layer components {
-  ion-button {
-    /* Standard Ionic tracking on buttons is too tight for my taste */
-    @apply tracking-normal;
-  }
+ion-button {
+  /* Standard Ionic tracking on buttons is too tight for my taste */
+  @apply tracking-normal;
+}
 
-  /* ion-item has a hardcoded font-size, use the base size */
-  ion-item {
-    font-size: 1rem;
-  }
+/* ion-item has a hardcoded font-size, use the base size */
+ion-item {
+  font-size: 1rem;
+}
+
+/*
+  On some Android devices, the native checkbox is displayed instead
+  of the svg checkbox, and it has no right margin. So we have to add
+  some margin between it and a label.
+*/
+ion-checkbox.md + ion-label {
+  @apply ml-1;
 }
