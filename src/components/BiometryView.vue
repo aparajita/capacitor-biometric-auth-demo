@@ -1,111 +1,111 @@
 <template>
-  <div class="">
-    <IonList line="full">
-      <IonListHeader>Status</IonListHeader>
+  <IonList lines="full">
+    <IonListHeader>Status</IonListHeader>
 
-      <IonItem>
-        {{ biometryDescription }}
-      </IonItem>
-    </IonList>
+    <IonItem>
+      {{ biometryDescription }}
+    </IonItem>
+  </IonList>
 
-    <IonList
-      class="mt-6"
-      lines="inset"
-    >
-      <IonListHeader>Options</IonListHeader>
+  <IonList
+    class="mt-6"
+    lines="full"
+  >
+    <IonListHeader>Options</IonListHeader>
 
-      <IonItem v-if="!isNative">
-        <!-- flex-initial puts the IonSelect just after the label -->
-        <IonLabel class="flex-initial">Biometry:</IonLabel>
+    <IonItem v-if="!isNative">
+      <!-- flex-initial puts the IonSelect just after the label -->
+      <IonLabel class="flex-initial">Biometry:</IonLabel>
 
-        <IonSelect
-          v-model="biometryType"
-          class="[--padding-start:0px] max-w-full"
-          interface="action-sheet"
-          :interface-options="{ header: 'Select biometry type' }"
-          @ion-change="onSelectBiometry"
-        >
-          <IonSelectOption
-            v-for="entry in biometryTypes"
-            :key="entry.type"
-            :value="String(entry.type)"
-          >
-            {{ entry.title }}
-          </IonSelectOption>
-        </IonSelect>
-      </IonItem>
-
-      <IonItem v-if="isAndroid">
-        <IonLabel>Title:</IonLabel>
-        <IonInput
-          v-model="options.androidTitle"
-          type="text"
-          autocapitalize="sentences"
-        />
-      </IonItem>
-
-      <IonItem v-if="isAndroid">
-        <IonLabel>Subtitle:</IonLabel>
-        <IonInput
-          v-model="options.androidSubtitle"
-          type="text"
-          autocapitalize="sentences"
-        />
-      </IonItem>
-
-      <IonItem>
-        <IonLabel>Reason:</IonLabel>
-        <IonInput
-          v-model="options.reason"
-          type="text"
-          autocapitalize="sentences"
-        />
-      </IonItem>
-
-      <IonItem v-if="isNative">
-        <IonLabel>Cancel title:</IonLabel>
-        <IonInput
-          v-model="options.cancelTitle"
-          type="text"
-          autocapitalize="sentences"
-        />
-      </IonItem>
-
-      <IonItem v-if="isIOS">
-        <IonLabel>Fallback title:</IonLabel>
-        <IonInput
-          v-model="options.iosFallbackTitle"
-          type="text"
-          autocapitalize="sentences"
-        />
-      </IonItem>
-
-      <IonItem v-if="isAndroid">
-        <IonLabel>Max attempts:</IonLabel>
-        <IonInput
-          v-model.number="options.androidMaxAttempts"
-          type="number"
-          inputmode="decimal"
-          min="1"
-          max="10"
-        />
-      </IonItem>
-
-      <IonItem v-if="isNative">
-        <IonCheckbox v-model="options.allowDeviceCredential" />
-        <IonLabel>Allow device credential</IonLabel>
-      </IonItem>
-    </IonList>
-
-    <!-- We want to center the button -->
-    <div class="flex justify-center">
-      <IonButton
-        class="mt-5 [--border-radius:100px]"
-        @click="onAuthenticate"
+      <IonSelect
+        v-model="biometryType"
+        class="[--padding-start:0px] max-w-full"
+        interface="action-sheet"
+        :interface-options="{ header: 'Select biometry type' }"
+        @ion-change="onSelectBiometry"
       >
-        Authenticate
-      </IonButton>
-    </div>
+        <IonSelectOption
+          v-for="entry in biometryTypes"
+          :key="entry.type"
+          :value="String(entry.type)"
+        >
+          {{ entry.title }}
+        </IonSelectOption>
+      </IonSelect>
+    </IonItem>
+
+    <IonItem v-if="isAndroid">
+      <IonLabel>Title:</IonLabel>
+      <IonInput
+        v-model="options.androidTitle"
+        type="text"
+        autocapitalize="sentences"
+      />
+    </IonItem>
+
+    <IonItem v-if="isAndroid">
+      <IonLabel>Subtitle:</IonLabel>
+      <IonInput
+        v-model="options.androidSubtitle"
+        type="text"
+        autocapitalize="sentences"
+      />
+    </IonItem>
+
+    <IonItem>
+      <IonLabel>Reason:</IonLabel>
+      <IonInput
+        v-model="options.reason"
+        type="text"
+        autocapitalize="sentences"
+      />
+    </IonItem>
+
+    <IonItem v-if="isNative">
+      <IonLabel>Cancel title:</IonLabel>
+      <IonInput
+        v-model="options.cancelTitle"
+        type="text"
+        autocapitalize="sentences"
+      />
+    </IonItem>
+
+    <IonItem v-if="isIOS">
+      <IonLabel>Fallback title:</IonLabel>
+      <IonInput
+        v-model="options.iosFallbackTitle"
+        type="text"
+        autocapitalize="sentences"
+      />
+    </IonItem>
+
+    <IonItem v-if="isAndroid">
+      <IonLabel>Max attempts:</IonLabel>
+      <IonInput
+        v-model.number="options.androidMaxAttempts"
+        type="number"
+        inputmode="decimal"
+        min="1"
+        max="10"
+      />
+    </IonItem>
+
+    <IonItem v-if="isNative">
+      <IonCheckbox v-model="options.allowDeviceCredential" />
+      <IonLabel>Allow device credential</IonLabel>
+    </IonItem>
+  </IonList>
+
+  <!-- We want to center the button -->
+  <div class="flex justify-center">
+    <IonButton
+      class="mt-5"
+      size="default"
+      shape="round"
+      @click="onAuthenticate"
+    >
+      Authenticate
+    </IonButton>
   </div>
 </template>
 
