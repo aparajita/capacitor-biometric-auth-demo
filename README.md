@@ -8,7 +8,7 @@ It’s also a good example of:
 
 - How to use [Vite](https://vitejs.dev) as the code packager and dev server, with live reload even when running on native platforms. Big thanks to [Aaron Saunders](https://www.youtube.com/c/AaronSaundersCI) for figuring that out.
 - How to integrate [Tailwind CSS](https://tailwindcss.com) with Ionic.
-- How to use Tailwind to set specific component CSS variables right where they are in the html — look at the `IonSelect` and `IonButton` classes in [`BiometryView.vue`](./src/components/BiometryView.vue).
+- How to use Tailwind to set specific component CSS variables right where they are in the html — look at the `IonSelect` classes in [`BiometryView.vue`](./src/components/BiometryView.vue).
 
 Here is this app running on both iOS and Android.
 
