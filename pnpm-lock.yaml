@@ -14,7 +14,7 @@ specifiers:
   '@capacitor/splash-screen': ^1.2.2
   '@capacitor/status-bar': ^1.0.8
   '@ionic/core': ^6.1.12
-  '@ionic/vue': 6.1.12
+  '@ionic/vue': 6.1.14-dev.11657574349.17cb208c
   '@ionic/vue-router': 6.1.12
   '@types/node': ^18.0.0
   '@typescript-eslint/eslint-plugin': ^5.30.3
@@ -52,7 +52,7 @@ dependencies:
   '@capacitor/splash-screen': 1.2.2_@capacitor+core@3.6.0
   '@capacitor/status-bar': 1.0.8_@capacitor+core@3.6.0
   '@ionic/core': 6.1.12
-  '@ionic/vue': 6.1.12
+  '@ionic/vue': 6.1.14-dev.11657574349.17cb208c
   '@ionic/vue-router': 6.1.12
   vue: 3.2.37
   vue-router: 4.0.16_vue@3.2.37
@@ -328,6 +328,14 @@ packages:
       tslib: 2.4.0
     dev: false
 
+  /@ionic/core/6.1.14-dev.11657574349.17cb208c:
+    resolution: {integrity: sha512-2wEhJ78MYz5qFrlIyH2DxXCQa2xfoC5qBSv/kPFPA3kam6QxXod2hD2ucn3OU1yxqO6m/cZ+VyJVafeo77jk7w==}
+    dependencies:
+      '@stencil/core': 2.17.0
+      ionicons: 6.0.2
+      tslib: 2.4.0
+    dev: false
+
   /@ionic/utils-array/2.1.5:
     resolution: {integrity: sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA==}
     engines: {node: '>=10.3.0'}
@@ -427,6 +435,13 @@ packages:
     resolution: {integrity: sha512-E6tW5GYml67X5YrMhNQb4EF50tE/oaKgQLFBTnp6VxAKTaCDrTQI+N9Ui4juKQ9amSZjVCaOFD/5nsmV/21eWg==}
     dependencies:
       '@ionic/core': 6.1.12
+      ionicons: 6.0.2
+    dev: false
+
+  /@ionic/vue/6.1.14-dev.11657574349.17cb208c:
+    resolution: {integrity: sha512-w19GX2mejRa1sMjIOacNTIHIBMUbgEcjd0XJKhwiOe6Td1g3yTHIZDjhjk0C6vtR3dIAu+mpSc9E6C/KqG6bsw==}
+    dependencies:
+      '@ionic/core': 6.1.14-dev.11657574349.17cb208c
       ionicons: 6.0.2
     dev: false
 
