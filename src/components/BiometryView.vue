@@ -1,111 +1,111 @@
 <template>
-  <IonList lines="full">
-    <IonListHeader>Status</IonListHeader>
+  <ion-list lines="full">
+    <ion-list-header>Status</ion-list-header>
 
-    <IonItem>
+    <ion-item>
       {{ biometryDescription }}
-    </IonItem>
-  </IonList>
+    </ion-item>
+  </ion-list>
 
-  <IonList
+  <ion-list
     class="mt-6"
     lines="full"
   >
-    <IonListHeader>Options</IonListHeader>
+    <ion-list-header>Options</ion-list-header>
 
-    <IonItem v-if="!isNative">
-      <!-- flex-initial puts the IonSelect just after the label -->
-      <IonLabel class="flex-initial">Biometry:</IonLabel>
+    <ion-item v-if="!isNative">
+      <!-- flex-initial puts the ion-select just after the label -->
+      <ion-label class="flex-initial">Biometry:</ion-label>
 
-      <IonSelect
+      <ion-select
         v-model="biometryType"
         class="[--padding-start:0px] max-w-full"
         interface="action-sheet"
         :interface-options="{ header: 'Select biometry type' }"
         @ion-change="onSelectBiometry"
       >
-        <IonSelectOption
+        <ion-select-option
           v-for="entry in biometryTypes"
           :key="entry.type"
           :value="String(entry.type)"
         >
           {{ entry.title }}
-        </IonSelectOption>
-      </IonSelect>
-    </IonItem>
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
 
-    <IonItem v-if="isAndroid">
-      <IonLabel>Title:</IonLabel>
-      <IonInput
+    <ion-item v-if="isAndroid">
+      <ion-label>Title:</ion-label>
+      <ion-input
         v-model="options.androidTitle"
         type="text"
         autocapitalize="sentences"
       />
-    </IonItem>
+    </ion-item>
 
-    <IonItem v-if="isAndroid">
-      <IonLabel>Subtitle:</IonLabel>
-      <IonInput
+    <ion-item v-if="isAndroid">
+      <ion-label>Subtitle:</ion-label>
+      <ion-input
         v-model="options.androidSubtitle"
         type="text"
         autocapitalize="sentences"
       />
-    </IonItem>
+    </ion-item>
 
-    <IonItem>
-      <IonLabel>Reason:</IonLabel>
-      <IonInput
+    <ion-item>
+      <ion-label>Reason:</ion-label>
+      <ion-input
         v-model="options.reason"
         type="text"
         autocapitalize="sentences"
       />
-    </IonItem>
+    </ion-item>
 
-    <IonItem v-if="isNative">
-      <IonLabel>Cancel title:</IonLabel>
-      <IonInput
+    <ion-item v-if="isNative">
+      <ion-label>Cancel title:</ion-label>
+      <ion-input
         v-model="options.cancelTitle"
         type="text"
         autocapitalize="sentences"
       />
-    </IonItem>
+    </ion-item>
 
-    <IonItem v-if="isIOS">
-      <IonLabel>Fallback title:</IonLabel>
-      <IonInput
+    <ion-item v-if="isIOS">
+      <ion-label>Fallback title:</ion-label>
+      <ion-input
         v-model="options.iosFallbackTitle"
         type="text"
         autocapitalize="sentences"
       />
-    </IonItem>
+    </ion-item>
 
-    <IonItem v-if="isAndroid">
-      <IonLabel>Max attempts:</IonLabel>
-      <IonInput
+    <ion-item v-if="isAndroid">
+      <ion-label>Max attempts:</ion-label>
+      <ion-input
         v-model.number="options.androidMaxAttempts"
         type="number"
         inputmode="decimal"
         min="1"
         max="10"
       />
-    </IonItem>
+    </ion-item>
 
-    <IonItem v-if="isNative">
-      <IonCheckbox v-model="options.allowDeviceCredential" />
-      <IonLabel>Allow device credential</IonLabel>
-    </IonItem>
-  </IonList>
+    <ion-item v-if="isNative">
+      <ion-checkbox v-model="options.allowDeviceCredential" />
+      <ion-label>Allow device credential</ion-label>
+    </ion-item>
+  </ion-list>
 
   <!-- We want to center the button -->
   <div class="flex justify-center">
-    <IonButton
+    <ion-button
       class="mt-5"
       size="default"
       shape="round"
       @click="onAuthenticate"
     >
       Authenticate
-    </IonButton>
+    </ion-button>
   </div>
 </template>
 
@@ -229,7 +229,6 @@ const isAndroid = computed(
  * methods
  */
 function updateBiometryInfo(info: CheckBiometryResult): void {
-  console.log(info)
   biometry.value = info
 }
 
