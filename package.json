@@ -11,8 +11,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm check.fix && pnpm build.only",
-    "build.only": "vite build",
+    "build": "pnpm check.fix && pnpm builder",
+    "builder": "vite build",
     "preview": "vite preview --port 1327",
     "lint": "eslint --cache . && pnpm typecheck",
     "lint.fix": "eslint --cache --fix . && pnpm typecheck",
