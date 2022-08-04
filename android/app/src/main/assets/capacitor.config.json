@@ -1,5 +1,5 @@
 {
-	"appId": "com.aparajita.capacitor.biometricauth",
+	"appId": "com.aparajita.capacitor.biometricauthdemo",
 	"appName": "Biometry",
 	"loggingBehavior": "debug",
 	"webDir": "dist",
