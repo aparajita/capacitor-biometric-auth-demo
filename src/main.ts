@@ -1,4 +1,5 @@
-import { IonicVue, isPlatform } from '@ionic/vue'
+import { Capacitor } from '@capacitor/core'
+import { IonicVue } from '@ionic/vue'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -25,7 +26,7 @@ import './assets/css/styles.pcss'
 
 const config: Record<string, unknown> = {}
 
-if (isPlatform('desktop')) {
+if (Capacitor.getPlatform() === 'web') {
   config.mode = 'ios'
 }
 

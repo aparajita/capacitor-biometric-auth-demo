@@ -79,17 +79,6 @@
       />
     </ion-item>
 
-    <ion-item v-if="isAndroid">
-      <ion-label>Max attempts:</ion-label>
-      <ion-input
-        v-model.number="options.androidMaxAttempts"
-        type="number"
-        inputmode="decimal"
-        min="1"
-        max="10"
-      />
-    </ion-item>
-
     <ion-item v-if="isNative">
       <ion-checkbox v-model="options.allowDeviceCredential" />
       <ion-label>Allow device credential</ion-label>
@@ -183,8 +172,7 @@ const options = reactive<AuthenticateOptions>({
   iosFallbackTitle: '',
   androidTitle: '',
   androidSubtitle: '',
-  allowDeviceCredential: false,
-  androidMaxAttempts: 3
+  allowDeviceCredential: false
 })
 
 const biometryType = ref(String(BiometryType.none))

@@ -4,7 +4,7 @@ import type { CapacitorConfig } from '@capacitor/cli'
 
 /* eslint-disable @typescript-eslint/naming-convention */
 const config: CapacitorConfig = {
-  appId: 'com.aparajita.capacitor.biometricauth',
+  appId: 'com.aparajita.capacitor.biometricauthdemo',
   appName: 'Biometry',
   loggingBehavior: 'debug',
   webDir: 'dist',
