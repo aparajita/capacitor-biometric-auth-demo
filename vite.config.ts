@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'url'
+import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 
@@ -10,9 +11,15 @@ export default defineConfig(() => {
         // it defaults to globalThis, which older android phones won't understand.
         context: 'window'
       },
-      sourcemap: process.env.NODE_ENV !== 'production'
+      sourcemap: process.env.NODE_ENV !== 'production',
+      target: 'es2017'
     },
-    plugins: [vue()],
+    plugins: [
+      legacy({
+        targets: ['defaults']
+      }),
+      vue()
+    ],
     resolve: {
       alias: {
         // eslint-disable-next-line @typescript-eslint/naming-convention
