@@ -24,7 +24,7 @@
     "android.prod": "ionic cap run android --open",
     "ionic:build": "vite build",
     "ionic:serve": "vite",
-    "release": "pnpm -s lint && commit-and-tag-version"
+    "release": "pnpm -s lint && commit-and-tag-version && git push --follow-tags"
   },
   "dependencies": {
     "@aparajita/capacitor-biometric-auth": "^3.0.2",
