@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm -s lint && pnpm -s builder",
+    "build": "pnpm -s builder",
     "builder": "vite build",
     "preview": "vite preview --port 1327",
     "lint.eslint": "eslint --cache --fix --ext js,mjs,ts,vue .",
@@ -24,10 +24,10 @@
     "android.prod": "ionic cap run android --open",
     "ionic:build": "vite build",
     "ionic:serve": "vite",
-    "release": "commit-and-tag-version"
+    "release": "pnpm -s lint && commit-and-tag-version"
   },
   "dependencies": {
-    "@aparajita/capacitor-biometric-auth": "^3.0.0",
+    "@aparajita/capacitor-biometric-auth": "^3.0.2",
     "@capacitor/android": "^4.0.1",
     "@capacitor/app": "^4.0.1",
     "@capacitor/core": "^4.0.1",
@@ -48,7 +48,7 @@
     "@aparajita/prettier-config": "^1.0.0",
     "@aparajita/tailwind-ionic": "^1.1.0",
     "@capacitor/cli": "^4.0.1",
-    "@types/node": "^18.6.3",
+    "@types/node": "^18.6.4",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "@vitejs/plugin-legacy": "^2.0.0",
@@ -68,7 +68,7 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "tailwind-config-viewer": "^1.7.1",
-    "tailwindcss": "^3.1.7",
+    "tailwindcss": "^3.1.8",
     "terser": "^5.14.2",
     "typescript": "~4.7.4",
     "ultra-runner": "^3.10.5",
