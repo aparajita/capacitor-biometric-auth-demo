@@ -3,4 +3,3 @@ pnpm-lock.yaml
 ios
 android
 dist
-.ultra.cache.json
