@@ -268,7 +268,7 @@ async function onAuthenticate(): Promise<void> {
 async function onSelectBiometry(
   event: SelectCustomEvent<string>
 ): Promise<void> {
-  BiometricAuth.setBiometryType(Number(event.detail.value))
+  await BiometricAuth.setBiometryType(Number(event.detail.value))
   updateBiometryInfo(await BiometricAuth.checkBiometry())
 }
 </script>

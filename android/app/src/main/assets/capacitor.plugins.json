@@ -1,7 +1,7 @@
 [
 	{
 		"pkg": "@aparajita/capacitor-biometric-auth",
-		"classpath": "com.aparajita.capacitor.biometricauth.BiometricAuth"
+		"classpath": "com.aparajita.capacitor.biometricauth.BiometricAuthNative"
 	},
 	{
 		"pkg": "@capacitor/app",

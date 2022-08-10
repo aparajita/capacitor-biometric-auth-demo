@@ -1,18 +1,18 @@
 <template>
-  <IonPage>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>Biometric auth</IonTitle>
-      </IonToolbar>
-    </IonHeader>
+  <ion-page>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Biometric auth</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-    <IonContent
+    <ion-content
       :scroll-y="true"
       class="ion-padding-vertical"
     >
       <BiometryView />
-    </IonContent>
-  </IonPage>
+    </ion-content>
+  </ion-page>
 </template>
 
 <script setup lang="ts">
