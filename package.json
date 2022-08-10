@@ -1,6 +1,6 @@
 {
   "name": "@aparajita/capacitor-biometric-auth-demo",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "An Ionic/Vue demo of the @aparajita/capacitor-biometric-auth plugin",
   "private": true,
   "author": "Aparajita Fishman",
@@ -24,7 +24,7 @@
     "android.prod": "ionic cap run android --open",
     "ionic:build": "vite build",
     "ionic:serve": "vite",
-    "prelease": "pnpm build",
+    "prerelease": "pnpm build",
     "release": "commit-and-tag-version && git push --follow-tags"
   },
   "dependencies": {
