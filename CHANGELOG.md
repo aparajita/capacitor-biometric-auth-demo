@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [3.0.4](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v3.0.3...v3.0.4) (2022-08-12)
+
+
+### Bug Fixes
+
+* typo in script name ([d6a37d2](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/d6a37d25eaff80c15663371be35f0c18c366170b))
+
+
+### Maintenance
+
+* remove all traces of ultra-runner ([db177c5](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/db177c537a17a99c5f643c8475ce68e1799e0e06))
+* remove legacy for now ([851e011](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/851e0119fcf7f5262f791c18f3453c02624d8161))
+* update to latest plugin ([890c32c](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/890c32cdc486a7994c44a2416cfed9844cdfc76e))
+
 ### [3.0.3](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v3.0.2...v3.0.3) (2022-08-10)
 
 ### [3.0.2](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v3.0.1...v3.0.2) (2022-08-10)
