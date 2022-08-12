@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@aparajita/capacitor-biometric-auth': link:../capacitor-biometric-auth
+  '@aparajita/capacitor-biometric-auth': ^3.1.2
   '@aparajita/eslint-config-vue': ^1.0.6
   '@aparajita/prettier-config': ^1.0.0
   '@aparajita/tailwind-ionic': ^1.1.0
@@ -48,7 +48,7 @@ specifiers:
   vue-tsc: ~0.40.0
 
 dependencies:
-  '@aparajita/capacitor-biometric-auth': link:../capacitor-biometric-auth
+  '@aparajita/capacitor-biometric-auth': 3.1.2
   '@capacitor/android': 4.0.1_@capacitor+core@4.0.1
   '@capacitor/app': 4.0.1_@capacitor+core@4.0.1
   '@capacitor/core': 4.0.1
@@ -97,6 +97,16 @@ devDependencies:
   vue-tsc: 0.40.0_typescript@4.7.4
 
 packages:
+
+  /@aparajita/capacitor-biometric-auth/3.1.2:
+    resolution: {integrity: sha512-ADpHOorMV7iwBB8juM8c30XMqc0CWO2mJjl4aK84JHVfACMNfXKIHkG3/k+2nxt67OtLxlpBBkFdEj0lVj1u/Q==}
+    engines: {node: '>=16.15.1'}
+    dependencies:
+      '@capacitor/android': 4.0.1_@capacitor+core@4.0.1
+      '@capacitor/app': 4.0.1_@capacitor+core@4.0.1
+      '@capacitor/core': 4.0.1
+      '@capacitor/ios': 4.0.1_@capacitor+core@4.0.1
+    dev: false
 
   /@aparajita/eslint-config-base/1.1.5_zdtdphgkne4her6tpyql22l7yu:
     resolution: {integrity: sha512-n8ry3mtZMz6BGGzpTCDNXLvuisYq4QBp70DuVQUAUmJ80oRxEM4+rygCEne+exMpZkt8m33UOppmNjGt3nNZ9w==}
