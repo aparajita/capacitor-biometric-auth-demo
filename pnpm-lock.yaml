@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@aparajita/capacitor-biometric-auth': ^3.1.2
+  '@aparajita/capacitor-biometric-auth': ^3.1.4
   '@aparajita/eslint-config-vue': ^1.0.6
   '@aparajita/prettier-config': ^1.0.0
   '@aparajita/tailwind-ionic': ^1.1.0
@@ -47,7 +47,7 @@ specifiers:
   vue-tsc: ~0.40.0
 
 dependencies:
-  '@aparajita/capacitor-biometric-auth': 3.1.2
+  '@aparajita/capacitor-biometric-auth': 3.1.4
   '@capacitor/android': 4.0.1_@capacitor+core@4.0.1
   '@capacitor/app': 4.0.1_@capacitor+core@4.0.1
   '@capacitor/core': 4.0.1
@@ -87,7 +87,7 @@ devDependencies:
   postcss: 8.4.16
   prettier: 2.7.1
   tailwind-config-viewer: 1.7.1_tailwindcss@3.1.8
-  tailwindcss: 3.1.8
+  tailwindcss: 3.1.8_postcss@8.4.16
   terser: 5.14.2
   typescript: 4.7.4
   vite: 3.0.5_terser@5.14.2
@@ -96,8 +96,8 @@ devDependencies:
 
 packages:
 
-  /@aparajita/capacitor-biometric-auth/3.1.2:
-    resolution: {integrity: sha512-ADpHOorMV7iwBB8juM8c30XMqc0CWO2mJjl4aK84JHVfACMNfXKIHkG3/k+2nxt67OtLxlpBBkFdEj0lVj1u/Q==}
+  /@aparajita/capacitor-biometric-auth/3.1.4:
+    resolution: {integrity: sha512-BFFLUJBA0Lygz4CEc6/CMHT12gObT6sdx9nVN8tfaFmvhJicHzR07mBA/95xOXHNgmZ6YRu8JEaK1jrczWAFkA==}
     engines: {node: '>=16.15.1'}
     dependencies:
       '@capacitor/android': 4.0.1_@capacitor+core@4.0.1
@@ -179,7 +179,7 @@ packages:
     dependencies:
       ansi-colors: 4.1.3
       postcss: 8.4.16
-      tailwindcss: 3.1.8
+      tailwindcss: 3.1.8_postcss@8.4.16
     dev: true
 
   /@babel/code-frame/7.18.6:
@@ -4070,15 +4070,17 @@ packages:
       open: 7.4.2
       portfinder: 1.0.29
       replace-in-file: 6.3.5
-      tailwindcss: 3.1.8
+      tailwindcss: 3.1.8_postcss@8.4.16
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /tailwindcss/3.1.8:
+  /tailwindcss/3.1.8_postcss@8.4.16:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
