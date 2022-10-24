@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [3.0.5](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v3.0.4...v3.0.5) (2022-10-24)
+
+
+### Bug Fixes
+
+* can’t share package name with plugin ([ad56e24](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/ad56e245c6365e0c26376c3cfb0639c64e28b749))
+* empty display on Android ([b297683](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/b297683f93e45319c94e04598f9655e3adb8bdd5))
+
+
+### Maintenance
+
+* update deps ([89910fb](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/89910fbcf0b9cc4eb5c137fd593f7b14a5b5e521))
+
 ### [3.0.4](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v3.0.3...v3.0.4) (2022-08-12)
 
 
