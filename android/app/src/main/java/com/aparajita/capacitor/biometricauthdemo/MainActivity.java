@@ -1,4 +1,4 @@
-package com.aparajita.capacitor.biometricauth;
+package com.aparajita.capacitor.biometricauthdemo;
 
 import com.getcapacitor.BridgeActivity;
 

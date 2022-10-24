@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aparajita.capacitor.biometricauth">
+    package="com.aparajita.capacitor.biometricauthdemo">
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,7 @@
         <activity
             android:exported="true"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-            android:name="com.aparajita.capacitor.biometricauth.MainActivity"
+            android:name="com.aparajita.capacitor.biometricauthdemo.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask">
