@@ -102,6 +102,7 @@
 import {
   type AuthenticateOptions,
   BiometricAuth,
+  BiometryErrorType,
   BiometryType,
   type CheckBiometryResult,
   getBiometryName,
@@ -163,7 +164,8 @@ const biometryTypes = [
 const biometry = ref<CheckBiometryResult>({
   isAvailable: false,
   biometryType: BiometryType.none,
-  reason: ''
+  reason: '',
+  code: BiometryErrorType.none
 })
 
 const options = reactive<AuthenticateOptions>({
@@ -196,7 +198,7 @@ const biometryDescription = computed(() => {
     }
 
     if (biometry.value.reason) {
-      description += ` ${biometry.value.reason}`
+      description += ` ${biometry.value.reason} (${biometry.value.code})`
     }
   } else {
     description += '.'
