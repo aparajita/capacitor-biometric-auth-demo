@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace="com.aparajita.capacitor.biometricauthdemo"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.aparajita.capacitor.biometricauthdemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "2.0.1"
+        versionCode 4
+        versionName "3.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

@@ -14,11 +14,9 @@
     <ion-list-header>Options</ion-list-header>
 
     <ion-item v-if="!isNative">
-      <!-- flex-initial puts the ion-select just after the label -->
-      <ion-label class="flex-initial">Biometry:</ion-label>
-
       <ion-select
         v-model="biometryType"
+        label="Biometry"
         class="[--padding-start:0px] max-w-full"
         interface="action-sheet"
         :interface-options="{ header: 'Select biometry type' }"
@@ -35,53 +33,54 @@
     </ion-item>
 
     <ion-item v-if="isAndroid">
-      <ion-label>Title:</ion-label>
       <ion-input
         v-model="options.androidTitle"
+        label="Title:"
         type="text"
         autocapitalize="sentences"
       />
     </ion-item>
 
     <ion-item v-if="isAndroid">
-      <ion-label>Subtitle:</ion-label>
       <ion-input
         v-model="options.androidSubtitle"
+        label="Subtitle:"
         type="text"
         autocapitalize="sentences"
       />
     </ion-item>
 
     <ion-item>
-      <ion-label>Reason:</ion-label>
       <ion-input
         v-model="options.reason"
+        label="Reason:"
         type="text"
         autocapitalize="sentences"
       />
     </ion-item>
 
     <ion-item v-if="isNative">
-      <ion-label>Cancel title:</ion-label>
       <ion-input
         v-model="options.cancelTitle"
+        label="Cancel title:"
         type="text"
         autocapitalize="sentences"
       />
     </ion-item>
 
     <ion-item v-if="isIOS">
-      <ion-label>Fallback title:</ion-label>
       <ion-input
         v-model="options.iosFallbackTitle"
+        label="Fallback title:"
         type="text"
         autocapitalize="sentences"
       />
     </ion-item>
 
     <ion-item v-if="isNative">
-      <ion-checkbox v-model="options.allowDeviceCredential" />
-      <ion-label>Allow device credential</ion-label>
+      <ion-checkbox v-model="options.allowDeviceCredential">
+        Allow device credential
+      </ion-checkbox>
     </ion-item>
   </ion-list>
 
@@ -116,7 +115,6 @@ import {
   IonCheckbox,
   IonInput,
   IonItem,
-  IonLabel,
   IonList,
   IonListHeader,
   IonSelect,
