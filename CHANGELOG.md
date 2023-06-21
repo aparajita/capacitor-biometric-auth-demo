@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.1](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v4.0.0...v4.0.1) (2023-06-21)
+
+
+### Maintenance
+
+* update deps ([29677f3](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/29677f3f058edcd2ea642ce30de554dce42e8469))
+
 ## [4.0.0](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v3.1.0...v4.0.0) (2023-06-15)
 
 
