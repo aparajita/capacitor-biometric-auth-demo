@@ -8,14 +8,14 @@ const config: CapacitorConfig = {
   appName: 'Biometry',
   loggingBehavior: 'debug',
   server: {
-    androidScheme: 'http'
+    androidScheme: 'http',
   },
   webDir: 'dist',
   plugins: {
     SplashScreen: {
-      launchAutoHide: false
-    }
-  }
+      launchAutoHide: false,
+    },
+  },
 }
 
 export default config

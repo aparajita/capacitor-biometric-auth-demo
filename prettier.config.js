@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@aparajita/prettier-config')
+  ...require('@aparajita/prettier-config'),
 }

@@ -22,7 +22,7 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonToolbar
+  IonToolbar,
 } from '@ionic/vue'
 import { onMounted } from 'vue'
 import BiometryView from '@/components/BiometryView.vue'
