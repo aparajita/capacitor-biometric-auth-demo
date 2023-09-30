@@ -105,7 +105,7 @@ import {
   BiometryType,
   type CheckBiometryResult,
   getBiometryName,
-  type ResultError
+  type ResultError,
 } from '@aparajita/capacitor-biometric-auth'
 import { Capacitor, type PluginListenerHandle } from '@capacitor/core'
 import type { SelectCustomEvent } from '@ionic/core'
@@ -119,7 +119,7 @@ import {
   IonListHeader,
   IonSelect,
   IonSelectOption,
-  isPlatform
+  isPlatform,
 } from '@ionic/vue'
 import {
   computed,
@@ -127,34 +127,34 @@ import {
   onBeforeUnmount,
   reactive,
   ref,
-  toRaw
+  toRaw,
 } from 'vue'
 
 const biometryTypes = [
   {
     title: 'None',
-    type: BiometryType.none
+    type: BiometryType.none,
   },
   {
     title: 'Touch ID',
-    type: BiometryType.touchId
+    type: BiometryType.touchId,
   },
   {
     title: 'Face ID',
-    type: BiometryType.faceId
+    type: BiometryType.faceId,
   },
   {
     title: 'Fingerprint Authentication',
-    type: BiometryType.fingerprintAuthentication
+    type: BiometryType.fingerprintAuthentication,
   },
   {
     title: 'Face Authentication',
-    type: BiometryType.faceAuthentication
+    type: BiometryType.faceAuthentication,
   },
   {
     title: 'Iris Authentication',
-    type: BiometryType.irisAuthentication
-  }
+    type: BiometryType.irisAuthentication,
+  },
 ]
 /*
  * ref
@@ -162,8 +162,9 @@ const biometryTypes = [
 const biometry = ref<CheckBiometryResult>({
   isAvailable: false,
   biometryType: BiometryType.none,
+  biometryTypes: [BiometryType.none],
   reason: '',
-  code: BiometryErrorType.none
+  code: BiometryErrorType.none,
 })
 
 const options = reactive<AuthenticateOptions>({
@@ -172,7 +173,7 @@ const options = reactive<AuthenticateOptions>({
   iosFallbackTitle: '',
   androidTitle: '',
   androidSubtitle: '',
-  allowDeviceCredential: false
+  allowDeviceCredential: false,
 })
 
 const biometryType = ref(String(BiometryType.none))
@@ -182,15 +183,35 @@ const appListener = ref<PluginListenerHandle>()
  * computed
  */
 const biometryName = computed(() => {
-  return getBiometryName(biometry.value.biometryType) || 'No biometry'
+  if (biometry.value.biometryTypes.length === 0) {
+    return 'No biometry'
+  }
+
+  if (biometry.value.biometryTypes.length === 1) {
+    return getBiometryName(biometry.value.biometryTypes[0])
+  }
+
+  return 'Biometry'
 })
 
 const biometryDescription = computed(() => {
-  let description = `${biometryName.value} is supported`
+  let description: string
+
+  if (biometry.value.biometryTypes.length > 0) {
+    description = `${biometry.value.biometryTypes
+      .map((type) => getBiometryName(type))
+      .join(' and ')} ${
+      biometry.value.biometryTypes.length === 1 ? 'is' : 'are'
+    } supported`
+  } else {
+    description = 'No biometry is supported'
+  }
 
   if (biometry.value.biometryType !== BiometryType.none) {
     if (biometry.value.isAvailable) {
-      description += ' and available.'
+      description += ` and ${
+        biometry.value.biometryTypes.length > 1 ? 'potentially ' : ''
+      }available.`
     } else {
       description += ', but not available.'
     }
@@ -210,7 +231,7 @@ const isNative = computed(() => Capacitor.isNativePlatform())
 const isIOS = computed(() => Capacitor.isNativePlatform() && isPlatform('ios'))
 
 const isAndroid = computed(
-  () => Capacitor.isNativePlatform() && isPlatform('android')
+  () => Capacitor.isNativePlatform() && isPlatform('android'),
 )
 
 /*
@@ -224,9 +245,8 @@ onBeforeMount(async () => {
   updateBiometryInfo(await BiometricAuth.checkBiometry())
 
   try {
-    appListener.value = await BiometricAuth.addResumeListener(
-      updateBiometryInfo
-    )
+    appListener.value =
+      await BiometricAuth.addResumeListener(updateBiometryInfo)
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message)
@@ -243,7 +263,7 @@ async function showAlert(message: string): Promise<void> {
     header: `${biometryName.value} says:`,
     subHeader: '',
     message,
-    buttons: ['OK']
+    buttons: ['OK'],
   })
   await alert.present()
 }
@@ -266,7 +286,7 @@ async function onAuthenticate(): Promise<void> {
 }
 
 async function onSelectBiometry(
-  event: SelectCustomEvent<string>
+  event: SelectCustomEvent<string>,
 ): Promise<void> {
   await BiometricAuth.setBiometryType(Number(event.detail.value))
   updateBiometryInfo(await BiometricAuth.checkBiometry())
