@@ -82,6 +82,12 @@
         Allow device credential
       </ion-checkbox>
     </ion-item>
+
+    <ion-item v-if="isAndroid">
+      <ion-checkbox v-model="options.androidConfirmationRequired">
+        Require confirmation
+      </ion-checkbox>
+    </ion-item>
   </ion-list>
 
   <!-- We want to center the button -->
@@ -119,7 +125,6 @@ import {
   IonListHeader,
   IonSelect,
   IonSelectOption,
-  isPlatform,
 } from '@ionic/vue'
 import {
   computed,
@@ -174,37 +179,50 @@ const options = reactive<AuthenticateOptions>({
   androidTitle: '',
   androidSubtitle: '',
   allowDeviceCredential: false,
+  androidConfirmationRequired: true,
 })
 
 const biometryType = ref(String(BiometryType.none))
 const appListener = ref<PluginListenerHandle>()
 
+const isNative = Capacitor.isNativePlatform()
+const isIOS = Capacitor.getPlatform() === 'ios'
+const isAndroid = Capacitor.getPlatform() === 'android'
+
 /*
  * computed
  */
 const biometryName = computed(() => {
-  if (biometry.value.biometryTypes.length === 0) {
-    return 'No biometry'
-  }
+  if (isNative) {
+    if (biometry.value.biometryTypes.length === 0) {
+      return 'No biometry'
+    }
 
-  if (biometry.value.biometryTypes.length === 1) {
-    return getBiometryName(biometry.value.biometryTypes[0])
-  }
+    if (biometry.value.biometryTypes.length === 1) {
+      return getBiometryName(biometry.value.biometryType)
+    }
 
-  return 'Biometry'
+    return 'Biometry'
+  } else {
+    return getBiometryName(biometry.value.biometryType) || 'No biometry'
+  }
 })
 
 const biometryDescription = computed(() => {
   let description: string
 
-  if (biometry.value.biometryTypes.length > 0) {
-    description = `${biometry.value.biometryTypes
-      .map((type) => getBiometryName(type))
-      .join(' and ')} ${
-      biometry.value.biometryTypes.length === 1 ? 'is' : 'are'
-    } supported`
+  if (isNative) {
+    if (biometry.value.biometryTypes.length > 0) {
+      description = `${biometry.value.biometryTypes
+        .map((type) => getBiometryName(type))
+        .join(' and ')} ${
+        biometry.value.biometryTypes.length === 1 ? 'is' : 'are'
+      } supported`
+    } else {
+      description = 'No biometry is supported'
+    }
   } else {
-    description = 'No biometry is supported'
+    description = `${biometryName.value} is supported`
   }
 
   if (biometry.value.biometryType !== BiometryType.none) {
@@ -225,14 +243,6 @@ const biometryDescription = computed(() => {
 
   return description
 })
-
-const isNative = computed(() => Capacitor.isNativePlatform())
-
-const isIOS = computed(() => Capacitor.isNativePlatform() && isPlatform('ios'))
-
-const isAndroid = computed(
-  () => Capacitor.isNativePlatform() && isPlatform('android'),
-)
 
 /*
  * methods

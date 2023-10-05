@@ -16,7 +16,7 @@ PODS:
     - Capacitor
 
 DEPENDENCIES:
-  - "AparajitaCapacitorBiometricAuth (from `../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@5.1.0/node_modules/@aparajita/capacitor-biometric-auth`)"
+  - AparajitaCapacitorBiometricAuth (from `../../../capacitor-biometric-auth`)
   - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@5.4.1_@capacitor+core@5.4.1/node_modules/@capacitor/ios`)"
   - "CapacitorApp (from `../../node_modules/.pnpm/@capacitor+app@5.0.6_@capacitor+core@5.4.1/node_modules/@capacitor/app`)"
   - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@5.4.1_@capacitor+core@5.4.1/node_modules/@capacitor/ios`)"
@@ -27,7 +27,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AparajitaCapacitorBiometricAuth:
-    :path: "../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@5.1.0/node_modules/@aparajita/capacitor-biometric-auth"
+    :path: "../../../capacitor-biometric-auth"
   Capacitor:
     :path: "../../node_modules/.pnpm/@capacitor+ios@5.4.1_@capacitor+core@5.4.1/node_modules/@capacitor/ios"
   CapacitorApp:
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd
   CapacitorStatusBar: 565c0a1ebd79bb40d797606a8992b4a105885309
 
-PODFILE CHECKSUM: c5fa03ebf9a667434f1c0e577ba1b8636ff80918
+PODFILE CHECKSUM: 2926ae48a3022c029ffddac8955791a02efb926a
 
 COCOAPODS: 1.13.0

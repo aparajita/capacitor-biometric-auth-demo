@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@aparajita/capacitor-biometric-auth':
-    specifier: ^5.1.0
-    version: 5.1.0
+    specifier: ^5.2.0
+    version: 5.2.0
   '@capacitor/android':
     specifier: ^5.4.1
     version: 5.4.1(@capacitor/core@5.4.1)
@@ -155,8 +155,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@aparajita/capacitor-biometric-auth@5.1.0:
-    resolution: {integrity: sha512-wkvP0pzrWGa5vbfwZ75ElUzlOG7oAKsKSIlT9JgoxRUjGVTnD6lDDJWfUkO/y8huX8VhcSo4J5xcfzEgcrD3Fg==}
+  /@aparajita/capacitor-biometric-auth@5.2.0:
+    resolution: {integrity: sha512-CdraDJH6g+AfQ1z+ax/WGpj9LzJmykE+nx4ytN36t2xwl0GO+eBrc+aCmhh8b0XhNG3NkYW3SWWRP+vdAKhhIQ==}
     engines: {node: '>=16.15.1'}
     dependencies:
       '@capacitor/android': 5.4.1(@capacitor/core@5.4.1)
