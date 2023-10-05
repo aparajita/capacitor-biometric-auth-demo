@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.2.0](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v4.1.0...v4.2.0) (2023-10-05)
+
+
+### Features
+
+* add “Require confirmation” option, fix web ([1859ad4](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/1859ad49ff72bb1655af374fdbc605f4a1084026))
+
 ## [4.1.0](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v4.0.1...v4.1.0) (2023-09-30)
 
 
