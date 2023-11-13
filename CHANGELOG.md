@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.0](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v4.2.1...v5.0.0) (2023-11-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* authenticate() now throws a BiometryError instance.
+
+### Features
+
+* upgrade to plugin v6 ([74d5e88](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/74d5e88d092dca031f5167c2e6c2d7d53e6494c4))
+
 ## [4.2.1](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v4.2.0...v4.2.1) (2023-10-11)
 
 
