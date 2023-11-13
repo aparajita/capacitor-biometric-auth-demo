@@ -1,5 +1,5 @@
 PODS:
-  - AparajitaCapacitorBiometricAuth (5.2.1):
+  - AparajitaCapacitorBiometricAuth (6.0.0):
     - Capacitor
   - Capacitor (5.4.2):
     - CapacitorCordova
@@ -16,7 +16,7 @@ PODS:
     - Capacitor
 
 DEPENDENCIES:
-  - "AparajitaCapacitorBiometricAuth (from `../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@5.2.1/node_modules/@aparajita/capacitor-biometric-auth`)"
+  - "AparajitaCapacitorBiometricAuth (from `../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@6.0.0/node_modules/@aparajita/capacitor-biometric-auth`)"
   - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@5.4.2_@capacitor+core@5.4.2/node_modules/@capacitor/ios`)"
   - "CapacitorApp (from `../../node_modules/.pnpm/@capacitor+app@5.0.6_@capacitor+core@5.4.2/node_modules/@capacitor/app`)"
   - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@5.4.2_@capacitor+core@5.4.2/node_modules/@capacitor/ios`)"
@@ -27,7 +27,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AparajitaCapacitorBiometricAuth:
-    :path: "../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@5.2.1/node_modules/@aparajita/capacitor-biometric-auth"
+    :path: "../../node_modules/.pnpm/@aparajita+capacitor-biometric-auth@6.0.0/node_modules/@aparajita/capacitor-biometric-auth"
   Capacitor:
     :path: "../../node_modules/.pnpm/@capacitor+ios@5.4.2_@capacitor+core@5.4.2/node_modules/@capacitor/ios"
   CapacitorApp:
@@ -44,7 +44,7 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/.pnpm/@capacitor+status-bar@5.0.6_@capacitor+core@5.4.2/node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  AparajitaCapacitorBiometricAuth: 34954d3d85dff8d44094abec38afcd1706a1d829
+  AparajitaCapacitorBiometricAuth: f8c58749dd42d2c0e91a36376b8a5a32f9a23947
   Capacitor: 8a9db42d105f55843cd8ed2a3cb54e2b78e7f102
   CapacitorApp: 024e1b1bea5f883d79f6330d309bc441c88ad04a
   CapacitorCordova: cfcc06b698481da655415985eeb2b8da363f8451
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd
   CapacitorStatusBar: 565c0a1ebd79bb40d797606a8992b4a105885309
 
-PODFILE CHECKSUM: 31d0a42360c9c4b7cea48073e336a8e2ae76773f
+PODFILE CHECKSUM: cb92aee9c524f9014eaf0cc5aec35742a4289d59
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.2

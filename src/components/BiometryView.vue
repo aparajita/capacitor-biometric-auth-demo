@@ -105,13 +105,15 @@
 
 <script setup lang="ts">
 import {
-  type AuthenticateOptions,
   BiometricAuth,
   BiometryErrorType,
   BiometryType,
-  type CheckBiometryResult,
   getBiometryName,
-  type ResultError,
+} from '@aparajita/capacitor-biometric-auth'
+import type {
+  AuthenticateOptions,
+  BiometryError,
+  CheckBiometryResult,
 } from '@aparajita/capacitor-biometric-auth'
 import { Capacitor, type PluginListenerHandle } from '@capacitor/core'
 import type { SelectCustomEvent } from '@ionic/core'
@@ -183,7 +185,7 @@ const options = reactive<AuthenticateOptions>({
 })
 
 const biometryType = ref(String(BiometryType.none))
-const appListener = ref<PluginListenerHandle>()
+let appListener: PluginListenerHandle
 
 const isNative = Capacitor.isNativePlatform()
 const isIOS = Capacitor.getPlatform() === 'ios'
@@ -255,8 +257,7 @@ onBeforeMount(async () => {
   updateBiometryInfo(await BiometricAuth.checkBiometry())
 
   try {
-    appListener.value =
-      await BiometricAuth.addResumeListener(updateBiometryInfo)
+    appListener = await BiometricAuth.addResumeListener(updateBiometryInfo)
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message)
@@ -265,7 +266,7 @@ onBeforeMount(async () => {
 })
 
 onBeforeUnmount(async () => {
-  await appListener.value?.remove()
+  await appListener?.remove()
 })
 
 async function showAlert(message: string): Promise<void> {
@@ -278,7 +279,7 @@ async function showAlert(message: string): Promise<void> {
   await alert.present()
 }
 
-async function showErrorAlert(error: ResultError): Promise<void> {
+async function showErrorAlert(error: BiometryError): Promise<void> {
   await showAlert(`${error.message} [${error.code}].`)
 }
 
@@ -291,7 +292,7 @@ async function onAuthenticate(): Promise<void> {
   } catch (error) {
     // Someday TypeScript will let us type catch clauses...
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-    await showErrorAlert(error as ResultError)
+    await showErrorAlert(error as BiometryError)
   }
 }
 

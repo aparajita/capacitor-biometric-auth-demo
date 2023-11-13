@@ -28,7 +28,7 @@
     "release": "commit-and-tag-version && git push --follow-tags"
   },
   "dependencies": {
-    "@aparajita/capacitor-biometric-auth": "^5.2.1",
+    "@aparajita/capacitor-biometric-auth": "^6.0.0",
     "@capacitor/android": "^5.4.2",
     "@capacitor/app": "^5.0.6",
     "@capacitor/core": "^5.4.2",
