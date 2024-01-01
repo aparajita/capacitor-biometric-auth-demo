@@ -30,6 +30,5 @@ router
     app.mount('#app')
   })
   .catch((error) => {
-    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
     console.error((error as Error).message)
   })

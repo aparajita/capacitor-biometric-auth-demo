@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import Home from '../views/HomeView.vue'
+import BiometryView from '../components/BiometryView.vue'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: Home,
+    component: BiometryView,
   },
 ]
 

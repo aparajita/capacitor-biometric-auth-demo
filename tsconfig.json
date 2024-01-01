@@ -29,10 +29,5 @@
     }
   },
   "include": ["**/*.js", "**/*.ts", "**/*.vue"],
-  "exclude": ["node_modules"],
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
-  ]
+  "exclude": ["node_modules"]
 }
