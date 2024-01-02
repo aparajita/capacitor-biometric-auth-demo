@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [6.0.1](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v6.0.0...v6.0.1) (2024-01-02)
+
+
+### Maintenance
+
+* update plugin dep ([520d37e](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/520d37ee4861e4c562e4c52840aaa9ccdf7c1ea0))
+* upgrade gradle ([c835dc8](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/c835dc88bcb9b0c8822fed3ee1f1663ae3082158))
+
 ## [6.0.0](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v5.0.0...v6.0.0) (2024-01-01)
 
 
