@@ -4,7 +4,7 @@
       <ion-toolbar>
         <ion-title>Biometry</ion-title>
         <ion-buttons slot="end">
-          <ion-button @click="onAuthenticate"> Authenticate </ion-button>
+          <ion-button @click="onAuthenticate"> Authenticate</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
@@ -13,21 +13,31 @@
       <ion-list lines="full">
         <ion-item>
           <ion-label>
-            <h1 class="!text-sm">Supported biometry</h1>
+            <h3 class="!text-sm">Supported biometry</h3>
             <!-- eslint-disable-next-line vue/no-v-text-v-html-on-component,vue/no-v-html -->
             <div v-html="biometryNames" />
           </ion-label>
         </ion-item>
 
         <ion-item>
-          <ion-label> Biometry available </ion-label>
+          <ion-label>
+            <ion-text class="block">Biometry available</ion-text>
+            <ion-text class="block !text-sm text-neutral-400">
+              {{ biometry.reason }}
+            </ion-text>
+          </ion-label>
           <ion-text slot="end">
             {{ availableBiometry }}
           </ion-text>
         </ion-item>
 
         <ion-item>
-          <ion-label> Strong biometry available </ion-label>
+          <ion-label>
+            <ion-text class="block">Strong biometry available</ion-text>
+            <ion-text class="block !text-sm text-neutral-400">
+              {{ biometry.strongReason }}
+            </ion-text>
+          </ion-label>
           <ion-text slot="end">
             {{ biometry.strongBiometryIsAvailable ? 'Yes' : 'No' }}
           </ion-text>
@@ -248,6 +258,8 @@ const biometry = ref<CheckBiometryResult>({
   deviceIsSecure: false,
   reason: '',
   code: BiometryErrorType.none,
+  strongReason: '',
+  strongCode: BiometryErrorType.none,
 })
 
 const options = reactive<AuthenticateOptions>({
@@ -308,6 +320,7 @@ const availableBiometry = computed(() => {
  * methods
  */
 function updateBiometryInfo(info: CheckBiometryResult): void {
+  console.log('updateBiometryInfo', info)
   biometry.value = info
 }
 
