@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@aparajita/capacitor-biometric-auth':
-    specifier: ^7.1.1
-    version: 7.1.1
+    specifier: ^7.2.0
+    version: 7.2.0
   '@capacitor/android':
     specifier: ^5.6.0
     version: 5.6.0(@capacitor/core@5.6.0)
@@ -164,14 +164,14 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@aparajita/capacitor-biometric-auth@7.1.1:
-    resolution: {integrity: sha512-hc9mdiH+Se1/Y+H2Wn0kp3/uo3JzgSYkgJozpjZMgx9o5hCvNvQA8m+HMxFd4cpM3XYKT15y0DYcECWcYrJhEw==}
+  /@aparajita/capacitor-biometric-auth@7.2.0:
+    resolution: {integrity: sha512-piU8bSB/tJPVRPCAhreC5cioM0CM5Hv6xADXBp6BcUz0n0YLI2TXykUHS+j1WMnhxxdsi4W1flCdQz0zz/K9Gg==}
     engines: {node: '>=18'}
     dependencies:
-      '@capacitor/android': 5.6.0(@capacitor/core@5.6.0)
-      '@capacitor/app': 5.0.6(@capacitor/core@5.6.0)
-      '@capacitor/core': 5.6.0
-      '@capacitor/ios': 5.6.0(@capacitor/core@5.6.0)
+      '@capacitor/android': 5.7.4(@capacitor/core@5.7.4)
+      '@capacitor/app': 5.0.7(@capacitor/core@5.7.4)
+      '@capacitor/core': 5.7.4
+      '@capacitor/ios': 5.7.4(@capacitor/core@5.7.4)
     dev: false
 
   /@aparajita/eslint-config-base@1.1.6(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint-config-standard@17.1.0)(eslint-import-resolver-typescript@3.6.1)(eslint-plugin-import@2.29.1)(eslint-plugin-n@16.6.2)(eslint-plugin-promise@6.1.1)(eslint@8.56.0)(typescript@5.3.3):
@@ -306,12 +306,28 @@ packages:
       '@capacitor/core': 5.6.0
     dev: false
 
+  /@capacitor/android@5.7.4(@capacitor/core@5.7.4):
+    resolution: {integrity: sha512-9ETwrCaLaimLHbwGpgfsPS9cHcPMFLmKFdlYsFsYIusMO6aOrcQTA9Q4xVAkr55ava4Wk+pVRniRYsekrbOLdw==}
+    peerDependencies:
+      '@capacitor/core': ^5.7.0
+    dependencies:
+      '@capacitor/core': 5.7.4
+    dev: false
+
   /@capacitor/app@5.0.6(@capacitor/core@5.6.0):
     resolution: {integrity: sha512-6ZXVdnNmaYILasC/RjQw+yfTmq2ZO7Q3v5lFcDVfq3PFGnybyYQh+RstBrYri+376OmXOXxBD7E6UxBhrMzXGA==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
       '@capacitor/core': 5.6.0
+    dev: false
+
+  /@capacitor/app@5.0.7(@capacitor/core@5.7.4):
+    resolution: {integrity: sha512-oad0jwQu+vgQDukeS9UV56yG10dlxkAGGl26IQpZlTmg3dTI9qSJtvhmlLfkF0nEtoj5IsVQUPE+NLH1oZkgGQ==}
+    peerDependencies:
+      '@capacitor/core': ^5.0.0
+    dependencies:
+      '@capacitor/core': 5.7.4
     dev: false
 
   /@capacitor/cli@5.6.0:
@@ -346,6 +362,12 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@capacitor/core@5.7.4:
+    resolution: {integrity: sha512-iZBgvx3o4amzKv5ttA+QHB6i7cxK+/mYpCQd1tnSdipg6ZkvfBhg1HkzhEqHk+I7MNur+QwgYDZho9+ycHRwOw==}
+    dependencies:
+      tslib: 2.6.2
+    dev: false
+
   /@capacitor/haptics@5.0.6(@capacitor/core@5.6.0):
     resolution: {integrity: sha512-UrMcR7p2X10ql4VLlowUuH/VckTeu0lj+RQpekxox14uxDmu5AGIFDK/iDTi8W6QZkxTJRZK6sbCjgwYgNJ7Pw==}
     peerDependencies:
@@ -360,6 +382,14 @@ packages:
       '@capacitor/core': ^5.6.0
     dependencies:
       '@capacitor/core': 5.6.0
+    dev: false
+
+  /@capacitor/ios@5.7.4(@capacitor/core@5.7.4):
+    resolution: {integrity: sha512-tQH24WMSYVKYr/Jl1gFImooQmu8OdXUFHoDaPV1WpZIiwbwxbTdwOXeLlGes5U8B8t7xuxTWMWMDt3IwRlDbhQ==}
+    peerDependencies:
+      '@capacitor/core': ^5.7.0
+    dependencies:
+      '@capacitor/core': 5.7.4
     dev: false
 
   /@capacitor/keyboard@5.0.7(@capacitor/core@5.6.0):

@@ -64,3 +64,4 @@ captures/
 .externalNativeBuild
 
 .eslintcache
+xcshareddata
