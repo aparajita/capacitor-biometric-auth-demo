@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.0.0](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v6.1.2...v7.0.0) (2024-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to Capacitor 6 and Ionic 8
+
+### Features
+
+* upgrade to Capacitor 6 and Ionic 8 ([5ebdde6](https://github.com/aparajita/capacitor-biometric-auth-demo/commit/5ebdde6a188d030a4987900f4d99eaf244f57b0b))
+
 ## [6.1.2](https://github.com/aparajita/capacitor-biometric-auth-demo/compare/v6.1.1...v6.1.2) (2024-04-04)
 
 
