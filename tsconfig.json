@@ -25,9 +25,9 @@
     "lib": ["es2017", "dom", "dom.iterable", "scripthost"],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-    },
+      "@/*": ["src/*"]
+    }
   },
   "include": ["**/*.js", "**/*.ts", "**/*.vue"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

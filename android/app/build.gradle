@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     namespace="com.aparajita.capacitor.biometricauthdemo"
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.aparajita.capacitor.biometricauthdemo"
         minSdkVersion rootProject.ext.minSdkVersion

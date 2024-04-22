@@ -2,7 +2,7 @@
 
 # capacitor-biometric-auth-demo&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/aparajita%2Fcapacitor-biometric-auth-demo.svg)](https://badge.fury.io/gh/aparajita%2Fcapacitor-biometric-auth-demo)
 
-This [Ionic](https://ionicframework.com) application provides a demo of all of the capacibilities of the [capacitor-biometric-auth](https://github.com/aparajita/capacitor-biometric-auth) Capacitor plugin.
+This [Ionic 8](https://ionicframework.com) application provides a demo of all of the capabilities of the [capacitor-biometric-auth](https://github.com/aparajita/capacitor-biometric-auth) Capacitor plugin.
 
 It’s also a good example of:
 
@@ -32,7 +32,7 @@ pnpm build  # npm run build
 To launch the demo in a browser:
 
 ```shell
-pnpm dev  # npm run serve
+pnpm dev  # npm run dev
 ```
 
 Once the demo is open, select a biometry type from the menu and click `Authenticate`. A browser confirm will appear with a prompt set to the `Reason` field. Clicking OK simulates successful authentication, clicking Cancel simulates user cancellation.
@@ -42,8 +42,8 @@ Once the demo is open, select a biometry type from the menu and click `Authentic
 To launch the demo in Xcode or Android Studio:
 
 ```shell
-pnpm ios.run  # npm run ios.run
-pnpm android.run  # npm run ios.run
+pnpm ios.dev  # npm run ios.dev
+pnpm android.dev  # npm run ios.dev
 ```
 
 Once Xcode/Android Studio opens, select the device or simulator you wish to run the demo on. When the demo app opens, the supported biometry type and status is displayed at the top.

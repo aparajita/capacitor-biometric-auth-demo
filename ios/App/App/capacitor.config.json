@@ -10,5 +10,14 @@
 		"SplashScreen": {
 			"launchAutoHide": false
 		}
-	}
+	},
+	"packageClassList": [
+		"BiometricAuthNative",
+		"BiometricAuthNative",
+		"AppPlugin",
+		"HapticsPlugin",
+		"KeyboardPlugin",
+		"SplashScreenPlugin",
+		"StatusBarPlugin"
+	]
 }
