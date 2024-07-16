@@ -13,7 +13,6 @@
 	},
 	"packageClassList": [
 		"BiometricAuthNative",
-		"BiometricAuthNative",
 		"AppPlugin",
 		"HapticsPlugin",
 		"KeyboardPlugin",
